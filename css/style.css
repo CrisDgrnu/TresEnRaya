@@ -1,0 +1,130 @@
+body{
+    background-color: #888581;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#score{
+    margin: 20px;
+}
+#score h2{
+    color: #fff;
+
+    font-family: 'Mulish', sans-serif;
+    font-size: 34px;
+
+    margin: 10px;
+}
+
+#score h3{
+    color: #fff;
+
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    font-size: 24px;
+
+    margin: 10px;
+}
+
+
+#tablero{
+    background-color: #B7B5B3;
+    
+    -webkit-box-shadow: 0px 0px 41px 23px rgba(136,133,129,1);
+    -moz-box-shadow: 0px 0px 41px 23px rgba(136,133,129,1);
+    box-shadow: 0px 0px 41px 23px rgba(136,133,129,1);
+
+    border-radius: 20px;
+    padding: 10px;
+
+    justify-self: center;
+    align-self: center;
+
+    /*Grid*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.cell{
+    background-color:#E5E7E6;
+    color: #E5E7E6;
+    transition: 0.5s;
+
+    font-size: 64px;
+    font-family: 'Mulish', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+
+
+    margin: 10px;
+
+    border-radius: 10px;
+
+    /*Position*/
+    justify-self: center;
+    align-self: center;
+}
+
+.cell:hover{
+    color: rgba(62,102,128,0.5);
+    transition: 0.5s;
+}
+
+
+#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+#popup h2{
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+}
+
+#popup a{
+    font-family: 'Mulish', sans-serif;
+    display: block;
+    text-align: center;
+}
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.blue{
+    color: #027BCE;
+    transition: 0.5s;
+}
+
+.red{
+    color: #D7263D;
+    transition: 0.5s;
+}
